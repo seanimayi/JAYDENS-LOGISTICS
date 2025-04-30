@@ -1,7 +1,8 @@
+import NavBar from "./Navbar";
 const Home = () => {
     return (
         <div>
-            <h1>Main Page</h1>
+            <NavBar />
         </div>
     )
 }
