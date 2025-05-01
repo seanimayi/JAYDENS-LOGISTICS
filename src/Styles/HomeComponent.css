@@ -244,6 +244,7 @@
 
 .section2_container {
   margin-top: var(--margin-xl);
+  width: 100%;
 }
 
 .section2_content span {

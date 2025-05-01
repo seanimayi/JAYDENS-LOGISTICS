@@ -15,7 +15,7 @@ const Section2 = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: false }}
               >
-                WHO WE ARE ?
+                WHAT WE DO ?
               </motion.span>
               <motion.h1
                 initial={{ opacity: 0, x: -100 }}

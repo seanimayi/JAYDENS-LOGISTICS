@@ -13,7 +13,7 @@ const NavBar = () => {
       });
     });
   }, []);
-  
+
   const handleClickNav = () => {
     const nav = document.querySelector(".header_bar nav");
     nav.classList.toggle("openNav");
@@ -34,7 +34,7 @@ const NavBar = () => {
         <motion.h1
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           viewport={{ once: false }}
         >
           <div>JL</div>
@@ -44,7 +44,7 @@ const NavBar = () => {
         <motion.nav
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           viewport={{ once: false }} // Dynamically add the "openNav" class
         >
           <Link to="/" className="links">

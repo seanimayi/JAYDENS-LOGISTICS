@@ -29,15 +29,177 @@
 
 .about_text {
     z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .about_text h1 {
     font-size: 4.5rem;
     font-weight: 250;
-    text-align: center;
     margin-bottom: var(--margin-xs);
 }
 
 .about_text p {
-    
+    width: 50%;
+    font-weight: 300;
+}
+
+/*About num content*/
+.aboutnum_numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: var(--margin-xl);
+}
+
+.aboutnum_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: var(--padding-xs) var(--padding-sm);
+}
+
+.aboutnum_number i {
+    font-size: 2.5rem;
+    color: var(--accent-blue);
+}
+
+.aboutnum_number h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    color: var(--accent-blue);
+}
+
+.aboutnum_number p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark-text);
+}
+
+/*user*/
+.about_users_container {
+    padding: var(--padding-xs) var(--padding-xs);
+    margin: 4rem 0;
+}
+
+.about_users_content {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 1rem;
+    width: 100%;
+}
+
+.about_users_intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: var(--margin-lg);
+}
+.about_users_intro span {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--dark-text);
+    padding-left: 30px; /* Adjust as needed */
+}
+.about_users_intro span::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--orange_red);
+    top: 5px;
+    left: 0;
+    border-radius: 50px;
+  }
+
+.about_users_intro h1 {
+    font-size: 3.5rem;
+    font-weight: 650;
+    margin-bottom: var(--margin-xs);
+}
+
+.about_users_intro h1 .text {
+    font-style: normal;
+    font-weight: 200;
+    color: var(--orange_red);
+}
+
+.about_users_intro button {
+    padding: var(--padding-xs) var(--padding-sm);
+    border: 1px solid var(--dark-text);
+    outline: none;
+    background-color: transparent;
+    color:var(--dark-text);
+    font-weight: 350;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.about_users_intro button .fa-arrow-right {
+    height: 25px;
+    width: 25px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: var(--margin-xs);
+    color: var(--dark-text);
+    border-radius: 50px;
+    border: 1px solid var(--dark-text);
+}
+
+.about_users_bx_content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--margin-xs);
+}
+
+.about_users_bx_users {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--margin-lg);
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.about_users_bx_users_img {
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.about_bx_users_text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--margin-xs);
+}
+
+.about_bx_users_text h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--dark-text);
+} 
+.about_bx_users_text p {
+    font-weight: 200;
 }
