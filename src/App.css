@@ -1,0 +1,39 @@
+:root {
+  /* 🎨 Color Palette */
+  --primary-blue: #1E3A8A;     /* Midnight Blue */
+  --accent-blue: #2563EB;      /* Royal Blue */
+  --light-blue: #60A5FA;       /* Sky Blue */
+  --hover-blue: #3B82F6;       /* Dodger Blue */
+  --bg-color: #ffffff;         /* Soft Slate */
+  --dark-text: #1F2937;        /* Charcoal */
+  --light-text: #64748B;    /* Slate Gray */
+  --orange_red: orangered;
+  --red: red;
+  --dark-blue: #1D3557;
+
+  /* 📐 Responsive Spacing */
+  --padding-xs: 0.5rem;        /* 8px */
+  --padding-sm: 1rem;          /* 16px */
+  --padding-md: 1.5rem;        /* 24px */
+  --padding-lg: 2rem;          /* 32px */
+  --padding-xl: 3rem;          /* 48px */
+
+  --margin-xs: 0.5rem;
+  --margin-sm: 1rem;
+  --margin-md: 1.5rem;
+  --margin-lg: 2rem;
+  --margin-xl: 3rem;
+
+  /* 🔠 Font Sizes */
+  --font-xs: 0.8rem;          /* 12px */
+  --font-sm: 0.975rem;         /* 14px */
+  --font-md: 1rem;             /* 16px */
+  --font-lg: 1.25rem;          /* 20px */
+  --font-xl: 1.5rem;           /* 24px */
+  --font-xxl: 2rem;            /* 32px */
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: Poppins, sans-serif;
+}
