@@ -1,0 +1,113 @@
+.hr_section1_content {
+    margin: 3.8rem 0;
+}
+
+.hr_section1_text {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    color: var(--dark-text);
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .hr_section1_text {
+        grid-template-columns: auto;
+    }
+}
+
+.hr_section_text1 span {
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.hr_section_text1 span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--orange_red);
+    border-radius: 50px;
+}
+
+.hr_section_text1 h1 {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.hr_section_text1 h1 i {
+    font-style: normal;
+    color: var(--orange_red);
+    font-weight: 300;
+}
+
+.hr_section_text2 p:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .hr_section_text2 p:not(:last-child) {
+        margin-top: 1.5rem;
+    }
+}
+
+/*Boxes*/
+.hr_boxes_content {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .hr_boxes_content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.hr_boxes {
+    padding: 1rem 1.5rem;
+    margin-bottom: calc(32% *3 / 22);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(12, 12, 63);
+    border-radius: 15px;
+    height: 270px;
+    color: var(--bg-color);
+}
+
+.hr_boxes i {
+    height: 45px;
+    width: 45px;
+    background-color: var(--bg-color);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-text);
+    flex-direction: column;
+}
+
+.hr_boxes h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.hr_boxes p {
+    font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+    .hr_boxes {
+        width: 48%;
+    }
+}

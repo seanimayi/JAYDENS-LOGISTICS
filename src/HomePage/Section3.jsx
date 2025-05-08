@@ -1,7 +1,9 @@
 import "../Styles/HomeComponent.css";
 import "../App.css";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 const Section3 = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="section3_container">
@@ -44,7 +46,12 @@ const Section3 = () => {
                 ensuring businesses achieve timely and cost-effective delivery
                 every time
               </p>
-              <button className="section3_content_button">View Details</button>
+              <button
+                className="section3_content_button"
+                onClick={() => navigate("/Logistics")}
+              >
+                View Details
+              </button>
             </motion.div>
 
             <motion.div
@@ -65,7 +72,12 @@ const Section3 = () => {
                 and training programs tailored to each organization’s unique
                 needs.
               </p>
-              <button className="section3_content_button">View Details</button>
+              <button
+                className="section3_content_button"
+                onClick={() => navigate("/HR")}
+              >
+                View Details
+              </button>
             </motion.div>
 
             <motion.div
@@ -84,7 +96,12 @@ const Section3 = () => {
                 individuals and teams with job-ready skills, leadership
                 development, and access to lifelong learning opportunities.
               </p>
-              <button className="section3_content_button">View Details</button>
+              <button
+                className="section3_content_button"
+                onClick={() => navigate("/EducationalServices")}
+              >
+                View Details
+              </button>
             </motion.div>
           </div>
         </div>

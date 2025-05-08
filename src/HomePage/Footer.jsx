@@ -6,37 +6,46 @@ const Footer = () => {
   return (
     <>
       <motion.footer
-         initial={{ opacity: 0, y: 100 }}
-         whileInView={{ opacity: 1, y: 0 }}
-         transition={{ duration: 1 }}
-         viewport={{ once: false }}>
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: false }}
+      >
         <div className="footer_content">
           <div className="footer_display_text">
             <motion.h1
-               initial={{ opacity: 0, x: -50 }}
-               whileInView={{ opacity: 1, x: 0 }}
-               transition={{ duration: 0.5 }}
-               viewport={{ once: false }}
-            >JLHE</motion.h1>
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false }}
+            >
+              JLHE
+            </motion.h1>
 
             <motion.h3
-             initial={{ opacity: 0, x: -50 }}
-             whileInView={{ opacity: 1, x: 0 }}
-             transition={{ duration: 0.5 }}
-             viewport={{ once: false }}>Stay Connected</motion.h3>
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false }}
+            >
+              Stay Connected
+            </motion.h3>
             <motion.p
-             initial={{ opacity: 0, x: -50 }}
-             whileInView={{ opacity: 1, x: 0 }}
-             transition={{ duration: 1 }}
-             viewport={{ once: false }}
-            >Empowering Businesses, Building Futures.</motion.p>
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: false }}
+            >
+              Empowering Businesses, Building Futures.
+            </motion.p>
 
             <motion.div
-             initial={{ opacity: 0, x: -50 }}
-             whileInView={{ opacity: 1, x: 0 }}
-             transition={{ duration: 1 }}
-             viewport={{ once: false }}
-             className="footer_inp">
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: false }}
+              className="footer_inp"
+            >
               <input type="text" placeholder="Enter Your Name" />
               <button>Stay Tuned!</button>
             </motion.div>
@@ -47,45 +56,70 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9 }}
               viewport={{ once: false }}
-            >The Future Of The People's Mind</motion.span>
+            >
+              The Future Of The People's Mind
+            </motion.span>
             <div className="footer_nav_container">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 90 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: false }}
-              className="footer_nav_content">
+                className="footer_nav_content"
+              >
                 <h2>Company</h2>
                 <nav>
-                  <Link path="/" className="footer_links">Home</Link>
-                  <Link path="" className="footer_links">About</Link>
-                  <Link path="" className="footer_links">Contact</Link>
-                  <Link path=""className="footer_links">Services</Link>
+                  <Link to="/" className="footer_links">
+                    Home
+                  </Link>
+                  <Link to="/About" className="footer_links">
+                    About
+                  </Link>
+                  <Link to="/Contact" className="footer_links">
+                    Contact
+                  </Link>
+                  <Link to="/Services" className="footer_links">
+                    Services
+                  </Link>
                 </nav>
               </motion.div>
 
               <motion.div
-               initial={{ opacity: 0, y: 90 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 1 }}
-               viewport={{ once: false }} className="footer_nav_content">
+                initial={{ opacity: 0, y: 90 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: false }}
+                className="footer_nav_content"
+              >
                 <h2>Support</h2>
                 <nav>
-                  <Link path="/" className="footer_links">FAQ</Link>
-                  <Link path="" className="footer_links">Customer Support</Link>
-                  <Link path="" className="footer_links">Pricing</Link>
+                  <Link to="/FAQ" className="footer_links">
+                    FAQ
+                  </Link>
+                  <Link to="" className="footer_links">
+                    Customer Support
+                  </Link>
                 </nav>
               </motion.div>
 
-              <motion.div   initial={{ opacity: 0, y: 90 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 1.3 }}
-               viewport={{ once: false }} className="footer_nav_content">
+              <motion.div
+                initial={{ opacity: 0, y: 90 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.3 }}
+                viewport={{ once: false }}
+                className="footer_nav_content"
+              >
                 <h2>Services</h2>
                 <nav>
-                  <Link path="/" className="footer_links">Human Resources</Link>
-                  <Link path="" className="footer_links">Logistics</Link>
-                  <Link path="" className="footer_links">Educational Services</Link>
+                  <Link to="/HR" className="footer_links">
+                    Human Resources
+                  </Link>
+                  <Link to="/Logistics" className="footer_links">
+                    Logistics
+                  </Link>
+                  <Link to="/EducationalServices" className="footer_links">
+                    Educational Services
+                  </Link>
                 </nav>
               </motion.div>
             </div>

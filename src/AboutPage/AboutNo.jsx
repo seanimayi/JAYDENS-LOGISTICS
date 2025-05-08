@@ -1,5 +1,6 @@
 import "../Styles/AboutComponent.css";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 const AboutNum = () => {
   const [numbers, setNumbers] = useState([0, 0, 0, 0]); // Initial numbers
 
@@ -31,22 +32,47 @@ const AboutNum = () => {
       <div className="aboutnum_container">
         <div className="aboutnum_content">
           <div className="aboutnum_numbers">
-            <div className="aboutnum_number">
+            <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+             className="aboutnum_number">
+              <i
+                className="fas fa-handshake
+                "
+              ></i>
               <h2>{numbers[0]}+</h2>
               <p>Clients Served</p>
-            </div>
-            <div className="aboutnum_number">
+            </motion.div>
+            <motion.div 
+               initial={{ opacity: 0, y: 100 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.9 }}
+               viewport={{ once: false }}
+            className="aboutnum_number">
+              <i className="fas fa-folder-open"></i>
               <h2>{numbers[1]}+</h2>
               <p>Projects Completed</p>
-            </div>
-            <div className="aboutnum_number">
+            </motion.div>
+            <motion.div
+               initial={{ opacity: 0, y: 100 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 1 }}
+               viewport={{ once: false }} className="aboutnum_number">
+              <i className="fas fa-briefcase"></i>
               <h2>{numbers[2]}+</h2>
               <p>Dedicated Professionals</p>
-            </div>
-            <div className="aboutnum_number">
+            </motion.div>
+            <motion.div 
+               initial={{ opacity: 0, y: 100 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 1.3 }}
+               viewport={{ once: false }}className="aboutnum_number">
+              <i className="fas fa-chart-line"></i>
               <h2>{numbers[3]}+</h2>
               <p>Stock Market</p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

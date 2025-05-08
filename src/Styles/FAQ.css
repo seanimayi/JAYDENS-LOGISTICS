@@ -1,0 +1,108 @@
+.faq_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+
+.faq_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .faq_content {
+    width: 100%;
+    padding: 0 var(--padding-sm);
+  }
+}
+
+.faq_content span {
+  position: relative;
+  color: var(--light-text);
+  text-transform: uppercase;
+  padding-left: 2rem;
+}
+
+.faq_content span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: var(--orange_red);
+  border-radius: 50px;
+}
+
+.faq_content h2 {
+  font-size: 2rem;
+  width: 50%;
+  text-align: center;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .faq_content h2 {
+    width: 100%;
+  }
+}
+
+.faq_content h2 i {
+  font-style: normal;
+  color: var(--orange_red);
+  font-weight: 200;
+}
+
+.faq_questions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0.8rem 0;
+  width: 100%;
+  position: relative;
+}
+
+.faq_questions:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.faq_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 3.5rem;
+}
+
+.faq_header h3 {
+  font-weight: 330;
+}
+
+.faq_title {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Hide content that exceeds the max-height */
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Smooth animation */
+    padding: 0; /* No padding when collapsed */
+  }
+  
+  .faq_title.open {
+    max-height: 200px; /* Adjust based on your content's height */
+    padding: 1rem; /* Add padding when expanded */
+    background-color: #f9f9f9; 
+    border-radius: 10px;/* Optional: Add a background color */
+    color: #333; /* Optional: Text color */
+  }

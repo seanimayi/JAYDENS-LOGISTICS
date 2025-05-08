@@ -1,29 +1,27 @@
 import "../App.css";
-import "../Styles/ServiceComponent.css";
-import ServiceDetails from "./Servicesdetails";
-import Footer from "../HomePage/Footer";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-
-const Services = () => {
+import { useState, useEffect } from "react";
+import HRsection1 from "./HRComponent/HRSection1";
+import Footer from '../HomePage/Footer'
+import Linked from './Links'
+const HR = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsMounted(true), 1);
-    return () => clearTimeout(timer);
+    const timeout = setTimeout(() => setIsMounted(true), 1);
+    return () => clearTimeout(timeout);
   }, []);
-
   if (!isMounted) return null;
-
   return (
     <>
-      <div className="service_container">
+      <div className="pages_container">
+        <Linked />
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
           viewport={{ once: false }}
-          className="bx_content services_content"
+          className="bx_content hr_content"
         >
           <motion.div className="bx_text">
             <motion.h1
@@ -32,7 +30,7 @@ const Services = () => {
               transition={{ duration: 1 }}
               viewport={{ once: false }}
             >
-              Services
+              Human Resources
             </motion.h1>
 
             <motion.p
@@ -41,21 +39,17 @@ const Services = () => {
               transition={{ duration: 1.4 }}
               viewport={{ once: false }}
             >
-              At Jaydens's Logistics, Human Resources, and Educational Services,
-              we provide a dynamic range of professional solutions tailored to
-              meet your needs. From fast and dependable logistics delivery to
-              strategic HR management and impactful educational programs, our
-              services are designed to drive results and empower growth.
+              At Jaydens’s Human Resources Services, we believe people are the
+              heart of every successful organization. Our HR solutions are
+              designed to help you attract, develop, and retain top talent. 
             </motion.p>
           </motion.div>
         </motion.div>
-
-        <ServiceDetails />
+        <HRsection1 />
       </div>
-
       <Footer />
     </>
   );
 };
 
-export default Services;
+export default HR;

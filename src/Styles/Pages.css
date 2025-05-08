@@ -1,0 +1,66 @@
+.pages_container {
+    padding: var(--padding-sm) var(--padding-lg);
+}
+
+@media screen and (max-width: 768px) {
+    .pages_container {
+        padding: var(--padding-xs) var(--padding-sm);
+    }
+}
+
+/*Logistics Container*/
+.logistics_content {
+    background: url("../assets/logistics2.jpg") no-repeat center/cover;
+}
+
+/**/
+.hr_content {
+    background: url("../assets/hr2.jpg") no-repeat center/cover;
+}
+
+.es_content {
+    background: url("../assets/educationalservies3.jpg") no-repeat center/cover;
+}
+
+/*Links*/
+.service_links_content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service_links_content nav {
+    display: flex;
+    gap: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.service_links_content nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    position: relative;
+    transition: 0.5s;
+}
+
+.service_links_content nav a:hover {
+    color: var(--accent-blue);
+    transform: scale(1.05);
+}
+
+.service_links_content nav a:not(:last-child)::after {
+    content: "|";
+    margin-left: 20px;
+}
+
+.active_link {
+    font-weight: 700;
+}
+
+@media screen and (max-width:768px) {
+    .service_links_content nav {
+        margin: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,143 @@
+.service_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--padding-sm) var(--padding-lg);
+}
+
+@media screen and (max-width: 768px) {
+  .service_container {
+    padding: var(--padding-sm);
+  }
+}
+
+.services_content {
+  background: url("../src/assets/building2.jpg") no-repeat center/cover;
+}
+
+/*Service list*/
+.service_list_container {
+  margin: var(--margin-xl) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.service_list_container h1 {
+  font-size: 2.5rem;
+  width: 75%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.service_list_container h1 i {
+  font-weight: 300;
+  color: var(--orange_red);
+  font-style: normal;
+}
+
+.service_list_content {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1.3rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.service_list_bx {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-top: 1rem;
+}
+
+.service_list_bx_content h2 {
+  font-size: 3.5rem;
+}
+
+.service_list_bx_content p {
+  color: var(--dark-text);
+  margin: 1rem 0;
+}
+
+.service_mini_bx {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.mini_bx {
+  height: 220px;
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: var(--padding-sm) var(--padding-sm);
+  overflow: hidden;
+  background-color: var(--bg-color);
+  transition: 0.5s;
+}
+
+.mini_bx:hover {
+    transform: scale(1.05);
+}
+
+
+.mini_bx i{
+    background-color: var(--primary-blue);
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mini_bx h2 {
+    font-size: var(--font-sm);
+    color: var(--dark-text);
+}
+
+.mini_bx p {
+    font-size: var(--font-xs);
+    color: var(--dark-text);
+}
+
+
+@media screen and (max-width: 768px) {
+    .service_list_container h1 {
+        text-align: left;
+        width: 100%;
+    }
+    .service_list_bx {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .mini_bx {
+        width: 30%;
+        height: auto;
+        gap: 1.4em;
+    }
+
+    .mini_bx h2 {
+        font-size: var(--font-xl);
+    }
+
+    .mini_bx p {
+        font-size: var(--font-md);
+    }
+}

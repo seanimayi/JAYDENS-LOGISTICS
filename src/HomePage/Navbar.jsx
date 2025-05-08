@@ -59,7 +59,7 @@ const NavBar = () => {
           <Link to="/Contact" className="links">
             Contact
           </Link>
-          <Link to="/get-started" className="links">
+          <Link to="/Contact" className="links">
             Get Started <i className="fas fa-arrow-right"></i>
           </Link>
         </motion.nav>

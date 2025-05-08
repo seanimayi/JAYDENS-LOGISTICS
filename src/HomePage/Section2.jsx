@@ -2,7 +2,9 @@ import "../Styles/HomeComponent.css";
 import "../App.css";
 import shakehands from "../assets/Shakehands.jpeg";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 const Section2 = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="section2_container">
@@ -86,7 +88,7 @@ const Section2 = () => {
                   </div>
                 </div>
 
-                <button className="section_book_button">Get Started</button>
+                <button className="section_book_button" onClick={() => {navigate('/Contact')}}>Get Started</button>
               </div>
             </motion.div>
           </div>

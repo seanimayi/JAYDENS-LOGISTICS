@@ -1,29 +1,28 @@
 import "../App.css";
-import "../Styles/ServiceComponent.css";
-import ServiceDetails from "./Servicesdetails";
-import Footer from "../HomePage/Footer";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-
-const Services = () => {
+import { useState, useEffect } from "react";
+import "../Styles/Pages.css";
+import { Links } from "react-router-dom";
+import Linked from "./Links";
+import Footer from '../HomePage/Footer'
+const ES = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsMounted(true), 1);
-    return () => clearTimeout(timer);
+    const timeout = setTimeout(() => setIsMounted(true), 1);
+    return () => clearTimeout(timeout);
   }, []);
-
   if (!isMounted) return null;
-
   return (
     <>
-      <div className="service_container">
+      <div className="pages_container">
+        <Linked />
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
           viewport={{ once: false }}
-          className="bx_content services_content"
+          className="bx_content es_content"
         >
           <motion.div className="bx_text">
             <motion.h1
@@ -32,7 +31,7 @@ const Services = () => {
               transition={{ duration: 1 }}
               viewport={{ once: false }}
             >
-              Services
+              Educational Services
             </motion.h1>
 
             <motion.p
@@ -41,21 +40,16 @@ const Services = () => {
               transition={{ duration: 1.4 }}
               viewport={{ once: false }}
             >
-              At Jaydens's Logistics, Human Resources, and Educational Services,
-              we provide a dynamic range of professional solutions tailored to
-              meet your needs. From fast and dependable logistics delivery to
-              strategic HR management and impactful educational programs, our
-              services are designed to drive results and empower growth.
+              At Jaydens’s Educational Services, we provide transformative
+              learning opportunities tailored to empower individuals with
+              relevant skills for today’s world.
             </motion.p>
           </motion.div>
         </motion.div>
-
-        <ServiceDetails />
       </div>
-
       <Footer />
     </>
   );
 };
 
-export default Services;
+export default ES;
