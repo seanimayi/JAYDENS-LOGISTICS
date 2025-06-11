@@ -1,10 +1,11 @@
 import "../App.css";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import "../Styles/Pages.css";
-import { Links } from "react-router-dom";
-import Linked from "./Links";
+import EducationSection1 from "./EducationalComponent/EducationalComponent";
+import EducationSection2 from "./EducationalComponent/Educationalcomponent2";
 import Footer from '../HomePage/Footer'
+import "../Styles/Pages.css";
+import Linked from "./Links";
 const ES = () => {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -46,6 +47,8 @@ const ES = () => {
             </motion.p>
           </motion.div>
         </motion.div>
+        <EducationSection1 />
+        <EducationSection2 />
       </div>
       <Footer />
     </>
