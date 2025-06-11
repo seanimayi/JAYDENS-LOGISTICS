@@ -1,10 +1,21 @@
 import "../App.css";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import HRsection1 from "./HRComponent/HRSection1";
-import Footer from '../HomePage/Footer'
-import Linked from './Links'
+import HRsection2 from "./HRComponent/HRSection2";
+import Footer from "../HomePage/Footer";
+import Linked from "./Links";
+
 const HR = () => {
+ 
+  const hrRef = useRef(null);
+
+  const scrollToHrSection = () => {
+    if (hrRef.current) {
+      hrRef.current.scrollIntoView({ behavior: "smooth" }); // Fixed typo
+    }
+  };
+
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -12,6 +23,8 @@ const HR = () => {
     return () => clearTimeout(timeout);
   }, []);
   if (!isMounted) return null;
+
+
   return (
     <>
       <div className="pages_container">
@@ -41,11 +54,12 @@ const HR = () => {
             >
               At Jaydens’s Human Resources Services, we believe people are the
               heart of every successful organization. Our HR solutions are
-              designed to help you attract, develop, and retain top talent. 
+              designed to help you attract, develop, and retain top talent.
             </motion.p>
           </motion.div>
         </motion.div>
-        <HRsection1 />
+        <HRsection2 scrollToHrSection={scrollToHrSection} />
+        <HRsection1 ref={hrRef} />
       </div>
       <Footer />
     </>

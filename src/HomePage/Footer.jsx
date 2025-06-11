@@ -1,12 +1,13 @@
 import "../Styles/HomeComponent.css";
 import "../App.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { motion } from "framer-motion";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <>
       <motion.footer
-        initial={{ opacity: 0, y: 100 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: false }}
@@ -18,6 +19,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: false }}
+              onClick={() => navigate('/')}
             >
               JLHE
             </motion.h1>
@@ -99,7 +101,7 @@ const Footer = () => {
                   <Link to="/FAQ" className="footer_links">
                     FAQ
                   </Link>
-                  <Link to="" className="footer_links">
+                  <Link to="/Contact" className="footer_links">
                     Customer Support
                   </Link>
                 </nav>

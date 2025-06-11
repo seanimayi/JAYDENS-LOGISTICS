@@ -1,9 +1,10 @@
 import "../Styles/HomeComponent.css";
 import "../App.css";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 const NavBar = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     const links = document.querySelectorAll(".links");
     links.forEach((link) => {
@@ -36,7 +37,11 @@ const NavBar = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: false }}
+
           className="font-bold"
+
+          onClick={() => navigate('/')}
+
         >
           <div>JL</div>
           <div>HE</div>
