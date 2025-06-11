@@ -36,6 +36,7 @@ const NavBar = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: false }}
+          className="font-bold"
         >
           <div>JL</div>
           <div>HE</div>
@@ -56,11 +57,14 @@ const NavBar = () => {
           <Link to="/Services" className="links">
             Services
           </Link>
+          <Link to="/news-update" className="links">
+            News & Update
+          </Link>
           <Link to="/Contact" className="links">
             Contact
           </Link>
-          <Link to="/Contact" className="links">
-            Get Started <i className="fas fa-arrow-right"></i>
+          <Link to="/Signup" className="links">
+            Sign Up <i className="fas fa-arrow-right"></i>
           </Link>
         </motion.nav>
 

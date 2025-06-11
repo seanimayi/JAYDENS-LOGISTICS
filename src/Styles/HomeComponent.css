@@ -53,7 +53,7 @@
 .header_bar nav .links:last-child {
   margin-left: var(--margin-lg);
   padding: var(--padding-xs) var(--padding-sm);
-  width: 160px;
+  width: 130px;
   background-color: var(--primary-blue);
   color: var(--bg-color);
   border-radius: 50px;

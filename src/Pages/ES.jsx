@@ -2,6 +2,7 @@ import "../App.css";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import "../Styles/Pages.css";
+import ServiceDetails from "../ServicesPage/Servicesdetails";
 import { Links } from "react-router-dom";
 import Linked from "./Links";
 import Footer from '../HomePage/Footer'
@@ -46,6 +47,7 @@ const ES = () => {
             </motion.p>
           </motion.div>
         </motion.div>
+        
       </div>
       <Footer />
     </>

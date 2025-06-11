@@ -88,7 +88,7 @@ const Section2 = () => {
                   </div>
                 </div>
 
-                <button className="section_book_button" onClick={() => {navigate('/Contact')}}>Get Started</button>
+                <button className="section_book_button text-[0.8rem] py-3 " onClick={() => {navigate('/Contact')}}>Get Started</button>
               </div>
             </motion.div>
           </div>

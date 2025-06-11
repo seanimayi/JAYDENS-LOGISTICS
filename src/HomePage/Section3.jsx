@@ -14,6 +14,7 @@ const Section3 = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: false }}
+              className="text-3xl font-bold"
             >
               <i>Comprehensive</i> Services <i>Tailored</i> To Meet Your
               <i>Unique</i> Needs.
@@ -23,6 +24,7 @@ const Section3 = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: false }}
+              className="font-bold"
             >
               At Jayden's Logistics, we are dedicated to providing services that
               not only meet but exceed your expectations.

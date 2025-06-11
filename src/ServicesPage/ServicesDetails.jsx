@@ -1,15 +1,12 @@
 import "../Styles/ServiceComponent.css";
 import "../App.css";
-import logistics from "../assets/logistics.jpeg";
-import HR from "../assets/HR.jpg";
-import educ from "../assets/educationservice.jpeg";
 import { motion } from "framer-motion";
 const ServiceDetails = () => {
   return (
     <>
       <div className="service_list_container">
         <motion.h1
-          initial={{ opacity: 0, x: -90 }}
+          initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.3 }}
           viewport={{ once: false }}

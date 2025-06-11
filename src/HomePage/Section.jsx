@@ -27,6 +27,7 @@ const Section = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: false }}
+              className="font-bold"
             >
               Jaydens's Logistics, <i>Human Resources</i> and Educational
               Services.

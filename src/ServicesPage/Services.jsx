@@ -49,10 +49,8 @@ const Services = () => {
             </motion.p>
           </motion.div>
         </motion.div>
-
-        <ServiceDetails />
       </div>
-
+      <ServiceDetails />
       <Footer />
     </>
   );

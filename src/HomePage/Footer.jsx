@@ -81,6 +81,9 @@ const Footer = () => {
                   <Link to="/Services" className="footer_links">
                     Services
                   </Link>
+                      <Link to="/news-update" className="footer_links">
+                    News & Updates
+                  </Link>
                 </nav>
               </motion.div>
 
