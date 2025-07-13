@@ -1,11 +1,13 @@
 import { MdSearch } from "react-icons/md";
 import DashboardPost from "./DashbboardPostElement";
 import AdminDashboardPostFill from "./AdminDashboardPostFill";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { lazy } from "react";
 
 export default function Post() {
   const [showPost, setShowPost] = useState(true);
   const [showPostFill, setShowPostFill] = useState(false);
+  const [length, setLength] = useState(0);
 
   const handlePost = () => {
     setShowPost(false);
@@ -13,10 +15,28 @@ export default function Post() {
   };
 
   const cancelPost = () => {
-    setShowPostFill(false)
-    setShowPost(true)
-  }
+    setShowPostFill(false);
+    setShowPost(true);
+  };
 
+  const updatePost = () => {
+    setLength(length + 1);
+  };
+
+  useEffect(() => {
+    const fetchPostCount = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/fetch-post-count");
+        const data = await response.json();
+        console.log("Post count:", data.length);
+        setLength(data.length);
+      } catch (error) {
+        console.error("Error fetching post count:", error);
+      }
+    };
+
+    fetchPostCount();
+  }, []);
   return (
     <>
       {showPost && (
@@ -24,7 +44,9 @@ export default function Post() {
           <div className="border-b border-slate-300 py-1 flex justify-between items-center w-full">
             <div>
               <h1 className="text-xl">Post</h1>
-              <h1 className="text-2xl text-slate-500">0 Post</h1>
+              <h1 className="text-2xl text-slate-500">
+                {length < 0 ? 0 : length} Post
+              </h1>
             </div>
 
             <div className="flex items-center justify-end gap-3 w-[60%]">
@@ -49,7 +71,12 @@ export default function Post() {
         </div>
       )}
 
-      {showPostFill && <AdminDashboardPostFill cancelPost={cancelPost}/>}
+      {showPostFill && (
+        <AdminDashboardPostFill
+          cancelPost={cancelPost}
+          updatePost={updatePost}
+        />
+      )}
     </>
   );
 }

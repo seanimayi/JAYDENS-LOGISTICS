@@ -25,6 +25,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+    padding: var(--padding-sm) var(--padding-lg);
 }
 
 .service_list_container h1 {
@@ -43,6 +44,8 @@
 .service_list_content {
   display: grid;
   grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
   gap: 1.3rem;
   width: 100%;
   margin-top: 1rem;
@@ -51,7 +54,10 @@
 .service_list_bx {
   display: grid;
   grid-template-columns: 40% 60%;
+  justify-content: center;
+  align-items: center;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .service_list_bx_content h2 {
@@ -88,56 +94,60 @@
 }
 
 .mini_bx:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-
-.mini_bx i{
-    background-color: var(--primary-blue);
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    color: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.mini_bx i {
+  background-color: var(--primary-blue);
+  height: 45px;
+  width: 45px;
+  border-radius: 10px;
+  color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .mini_bx h2 {
-    font-size: var(--font-sm);
-    color: var(--dark-text);
+  font-size: var(--font-sm);
+  color: var(--dark-text);
 }
 
 .mini_bx p {
-    font-size: var(--font-xs);
-    color: var(--dark-text);
+  font-size: var(--font-xs);
+  color: var(--dark-text);
 }
 
-
 @media screen and (max-width: 768px) {
-    .service_list_container h1 {
-        text-align: left;
-        width: 100%;
-    }
-    .service_list_bx {
-       display: flex;
-       flex-wrap: wrap;
-       align-items: center;
-       justify-content: center;
-    }
+  .service_list_container h1 {
+    text-align: left;
+    width: 100%;
+  }
+  .service_list_bx {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .mini_bx {
-        width: 30%;
-        height: auto;
-        gap: 1.4em;
-    }
+  .service_mini_bx {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .mini_bx h2 {
-        font-size: var(--font-xl);
-    }
+  .mini_bx {
+    width: 80%;
+    height: auto;
+    gap: 1.4em;
+  }
 
-    .mini_bx p {
-        font-size: var(--font-md);
-    }
+  .mini_bx h2 {
+    font-size: var(--font-xl);
+  }
+
+  .mini_bx p {
+    font-size: var(--font-md);
+  }
 }

@@ -74,7 +74,7 @@ const AdminForm = () => {
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               exit={{ opacity: 0, y: "-100%" }}
-              className="h-[60px] absolute w-[30%] bg-red-500 top-0 shadow-md text-white p-5 rounded-sm flex flex-start items-start flex-col"
+              className="h-[60px] absolute md:w-[30%] w-[100%] bg-red-500 top-0 shadow-md text-white p-5 rounded-sm flex flex-start items-start flex-col"
             >
               {error}
             </motion.div>
@@ -85,7 +85,7 @@ const AdminForm = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="shadow-xl ring-1 ring-slate-50 w-[380px] p-[2rem] bg-white"
+          className="shadow-xl ring-1 ring-slate-50 md:w-[380px] w-[310px] p-[2rem] bg-white"
         >
           <form
             className="flex flex-start items-start flex-col gap-3 w-[100%]"

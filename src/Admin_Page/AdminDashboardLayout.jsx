@@ -11,7 +11,7 @@ const AdminDashboardLayout = () => {
     setShowGreeting(true);
     setTimeout(() => {
       setShowGreeting(false);
-    }, 3000);
+    }, 1500);
   }, []);
 
   return (
@@ -24,7 +24,7 @@ const AdminDashboardLayout = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
               exit={{ opacity: 0, y: "-100%" }}
-              className="h-[60px] z-10 left-0 w-[30%] absolute bg-blue-500 top-0 shadow-md text-white p-5 rounded-sm flex items-center justify-center"
+              className="h-[60px] z-10 left-0 w-full md:w-[30%] absolute bg-blue-500 top-0 shadow-md text-white p-5 rounded-sm flex items-center justify-center"
             >
               Welcome back, {userName}!
             </motion.div>

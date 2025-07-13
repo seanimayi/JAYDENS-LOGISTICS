@@ -17,12 +17,13 @@ import Admin from "./Admin_Page/Admin";
 import Employees from "./Admin_Page/Employees";
 import Profile from "./Admin_Page/Profile";
 import Settings from "./Admin_Page/Settings";
+import Notification from "./Admin_Page/Notification";
 
 import "./App.css";
 
 function App() {
   const location = useLocation();
-  const hidePathName = ["/dashboard", "/dashboard/post", "/dashboard/admin", "/dashboard/employees", "/dashboard/profile", "/dashboard/settings"];
+  const hidePathName = ["/dashboard/", "/dashboard", "/dashboard/post", "/dashboard/admin", "/dashboard/employees", "/dashboard/profile", "/dashboard/settings", '/dashboard/notification'];
 
   return (
     <>
@@ -49,6 +50,7 @@ function App() {
           <Route path="employees" element={<Employees />} />
           <Route path="profile" element={<Profile />} />
           <Route path="settings" element={<Settings />} />
+          <Route path='notification' element={<Notification/>} />
         </Route>
       </Routes>
     </>

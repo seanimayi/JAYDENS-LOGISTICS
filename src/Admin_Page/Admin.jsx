@@ -11,7 +11,7 @@ export default function Admin() {
         });
         const data = await res.json();
         if (!res.ok) {
-          alert(data.message);
+          console.log(data.message)
         } else {
           setAdmins(data.data);
           console.log(data.data)

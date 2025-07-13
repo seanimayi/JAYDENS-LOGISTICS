@@ -17,14 +17,23 @@ export default function DashboardChart() {
     { month: "Jun", growth: 30 },
   ];
 
-  const postOverTime = [
-    { month: "Jan", posts: 20 },
-    { month: "Feb", posts: 30 },
-    { month: "Mar", posts: 25 },
-    { month: "Apr", posts: 40 },
-    { month: "May", posts: 50 },
-    { month: "Jun", posts: 60 },
-  ];
+  const date = new Date();
+
+
+const postOverTime = [
+  {month: 'Jan', post: 20},
+  {month: 'Feb', post: 40},
+  {month: 'Mar', post: 40},
+  {month: 'Apr', post: 60},
+  {month: 'May', post: 29},
+  {month: 'Jun', post: 80},
+  {month: 'Jul', post: 20},
+  {month: 'Aug', post: 10},
+  {month: 'Sep', post: 60},
+  {month: 'Oct', post: 30},
+  {month: 'Nov', post: 0},
+  {month: 'Dec', post: 0},
+]
 
   return (
     <>
@@ -63,8 +72,8 @@ export default function DashboardChart() {
                 <XAxis dataKey="month" tick={{ fontSize: 12 }} />
                 <Tooltip />
                 <Line
-                  type='monotone'
-                  dataKey="posts"
+                  type="monotone"
+                  dataKey="post"
                   stroke="#82ca9d"
                   activeDot={{ r: 8 }}
                 />

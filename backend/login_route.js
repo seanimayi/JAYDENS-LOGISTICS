@@ -3,7 +3,6 @@ import express from "express";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs"; // For password comparison
 import jwt from "jsonwebtoken"; // If you plan to use JWT for authentication
-import e from "express";
 
 const router = express.Router();
 const prisma = new PrismaClient();
